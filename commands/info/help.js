@@ -50,8 +50,6 @@ module.exports = {
                 }
             });
         
-            let row = new ActionRowBuilder()
-
             message.reply({ embeds: [embed], components: [row] })
         } catch (err) {
             console.log(err)
