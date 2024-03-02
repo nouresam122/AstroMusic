@@ -49,3 +49,12 @@ module.exports = {
                     embed.addFields({ name: `${prefix}${properties.name}`, value: `${properties.description}`, inline: false })
                 }
             });
+        
+            let row = new ActionRowBuilder()
+
+            message.reply({ embeds: [embed], components: [row] })
+        } catch (err) {
+            console.log(err)
+        }
+    },
+};
