@@ -50,18 +50,3 @@ module.exports = {
                     embed.addFields({ name: `/${properties.name}`, value: `${properties.description}`, inline: false })
                 }
             });
-
-            let row = new ActionRowBuilder()
-                .addComponents(
-                    new ButtonBuilder()
-                        .setStyle(ButtonStyle.Link)
-                        .setLabel('Invite Bot')
-                        .setURL(`https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`))
-
-
-            interaction.reply({ embeds: [embed], components: [row], ephemeral: true })
-        } catch (err) {
-            console.log(err)
-        }
-    },
-};
