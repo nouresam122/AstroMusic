@@ -50,6 +50,14 @@ module.exports = {
                 }
             });
 
+            let row = new ActionRowBuilder()
+                .addComponents(
+                    new ButtonBuilder()
+                        .setStyle(ButtonStyle.Link)
+                        .setLabel('Server Support')
+                        .setURL(`https://discord.gg/mazen`))
+
+            message.reply({ embeds: [embed], components: [row] })
         } catch (err) {
             console.log(err)
         }
